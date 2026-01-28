@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Brew & Bean Café</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="coffee-shop.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <div class="logo">
+          <span class="logo-mark">B&B</span>
+          <div>
+            <div class="logo-title">Brew &amp; Bean</div>
+            <div class="logo-subtitle">Artisan Coffee House</div>
+          </div>
+        </div>
+
+        <nav class="nav-links">
+          <a href="#hero">Home</a>
+          <a href="#menu">Menu</a>
+          <a href="#about">About</a>
+          <a href="#rewards">Rewards</a>
+        </nav>
+
+        <div class="header-actions">
+          <button class="ghost-btn" id="loginBtn">Sign in</button>
+          <button class="cart-btn" id="cartBtn">
+            <span class="cart-icon">🛒</span>
+            <span>Cart</span>
+            <span class="cart-count" id="cartCount">0</span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- Hero -->
+      <section id="hero" class="hero">
+        <div class="container hero-inner">
+          <div class="hero-copy">
+            <p class="eyebrow">SMALL BATCH · SINGLE ORIGIN</p>
+            <h1>
+              Coffee that feels<br />
+              like a warm hug.
+            </h1>
+            <p class="hero-text">
+              Hand-poured classics, seasonal cold brews, and pastries baked each
+              morning. Order ahead, earn rewards, and skip the line.
+            </p>
+            <div class="hero-actions">
+              <button class="primary-btn" data-scroll-target="#menu">
+                Order your usual
+              </button>
+              <button class="secondary-btn" data-scroll-target="#rewards">
+                Join rewards
+              </button>
+            </div>
+
+            <div class="hero-badges">
+              <div>
+                <strong>450+</strong>
+                daily brews
+              </div>
+              <div>
+                <strong>4.9</strong>
+                star community rating
+              </div>
+              <div>
+                <strong>15</strong>
+                signature recipes
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-card">
+            <div class="hero-pill">New · Caramel Cloud Cold Brew</div>
+            <div class="hero-image"></div>
+            <div class="hero-card-footer">
+              <div>
+                <h3>Morning Ritual</h3>
+                <p>
+                  Oat milk cold foam, espresso concentrate, burnt caramel
+                  drizzle.
+                </p>
+              </div>
+              <button class="ghost-btn small" data-add-featured>Quick add</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Menu -->
+      <section id="menu" class="menu-section">
+        <div class="container">
+          <div class="section-header">
+            <div>
+              <p class="eyebrow">MENU</p>
+              <h2>Inspired by your favorite coffee bars.</h2>
+            </div>
+            <div class="chip-row" id="categoryChips">
+              <button class="chip active" data-category="all">All</button>
+              <button class="chip" data-category="espresso">Espresso</button>
+              <button class="chip" data-category="cold-brew">Cold Brew</button>
+              <button class="chip" data-category="frappes">Frappes</button>
+              <button class="chip" data-category="pastries">Pastries</button>
+            </div>
+          </div>
+
+          <div class="menu-grid" id="menuGrid">
+            <!-- JS injects drink cards -->
+          </div>
+        </div>
+      </section>
+
+      <!-- Rewards / About -->
+      <section id="rewards" class="rewards-section">
+        <div class="container rewards-inner">
+          <div>
+            <p class="eyebrow">BREW &amp; BEAN REWARDS</p>
+            <h2>Earn free drinks while you caffeinate.</h2>
+            <p>
+              Every purchase adds stars to your account. Unlock handcrafted
+              drinks, bakery treats, and exclusive seasonal drops before anyone
+              else.
+            </p>
+            <ul class="reward-list">
+              <li><strong>2★</strong> for every ₹1 spent in-store or online.</li>
+              <li>Free birthday drink and early access to new menus.</li>
+              <li>Members-only tastings and latte art classes.</li>
+            </ul>
+            <button class="primary-btn" id="joinBtn">Join &amp; sign in</button>
+          </div>
+          <div class="reward-card">
+            <h3>Today’s member picks</h3>
+            <div class="reward-row">
+              <span>Matcha Oat Shaken Espresso</span>
+              <span class="pill pill-green">Popular</span>
+            </div>
+            <div class="reward-row">
+              <span>Brown Sugar Cold Brew</span>
+              <span class="pill">Iced</span>
+            </div>
+            <div class="reward-row">
+              <span>Dark Mocha Frappe</span>
+              <span class="pill pill-dark">Indulgent</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- About -->
+      <section id="about" class="about-section">
+        <div class="container about-inner">
+          <div>
+            <p class="eyebrow">OUR STORY</p>
+            <h2>From Bengaluru mornings to late-night study sessions.</h2>
+            <p>
+              We roast in micro-batches, work directly with farms across
+              Chikmagalur, and steam every cup to order. No burnt espresso, no
+              stale beans—just care in every pour.
+            </p>
+          </div>
+          <div class="about-stats">
+            <div>
+              <strong>100%</strong>
+              arabica beans
+            </div>
+            <div>
+              <strong>0</strong>
+              artificial syrups
+            </div>
+            <div>
+              <strong>24</strong>
+              hour cold brew cycle
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Cart Drawer -->
+    <aside class="cart-drawer" id="cartDrawer" aria-hidden="true">
+      <div class="cart-overlay" id="cartOverlay"></div>
+      <div class="cart-panel">
+        <header class="cart-header">
+          <h2>Your order</h2>
+          <button class="icon-btn" id="closeCart">&times;</button>
+        </header>
+        <div class="cart-body" id="cartItems">
+          <p class="empty-cart">Your cart is empty. Add something delicious ☕</p>
+        </div>
+        <footer class="cart-footer">
+          <div class="cart-summary">
+            <span>Subtotal</span>
+            <span id="cartSubtotal">₹0.00</span>
+          </div>
+          <button class="primary-btn full-width" id="checkoutBtn">
+            Proceed to payment
+          </button>
+        </footer>
+      </div>
+    </aside>
+
+    <!-- Login / Signup Modal -->
+    <div class="modal" id="authModal" aria-hidden="true">
+      <div class="modal-overlay" id="authOverlay"></div>
+      <div class="modal-panel">
+        <button class="icon-btn modal-close" id="authClose">&times;</button>
+        <h2>Welcome back</h2>
+        <p class="modal-subtitle">
+          Sign in to sync your favorites and earn rewards on every sip.
+        </p>
+        <form id="authForm" class="auth-form">
+          <label>
+            Email
+            <input type="email" id="authEmail" required placeholder="you@example.com" />
+          </label>
+          <label>
+            Password
+            <input type="password" id="authPassword" required placeholder="••••••••" />
+          </label>
+          <button class="primary-btn full-width" type="submit">Sign in</button>
+          <p class="auth-note">
+            Demo only – this does not create a real account, it just simulates
+            login on the front-end.
+          </p>
+        </form>
+      </div>
+    </div>
+
+    <!-- Payment Modal -->
+    <div class="modal" id="paymentModal" aria-hidden="true">
+      <div class="modal-overlay" id="paymentOverlay"></div>
+      <div class="modal-panel">
+        <button class="icon-btn modal-close" id="paymentClose">&times;</button>
+        <h2>Checkout</h2>
+        <p class="modal-subtitle">
+          This is a demo payment screen. In a real project you would connect a
+          provider like Stripe or Razorpay here.
+        </p>
+        <form id="paymentForm" class="payment-form">
+          <label>
+            Name on card
+            <input type="text" required placeholder="Coffee Lover" />
+          </label>
+          <label>
+            Card number
+            <input type="text" required maxlength="19" placeholder="4242 4242 4242 4242" />
+          </label>
+          <div class="payment-row">
+            <label>
+              Expiry
+              <input type="text" required maxlength="5" placeholder="12/28" />
+            </label>
+            <label>
+              CVV
+              <input type="password" required maxlength="4" placeholder="123" />
+            </label>
+          </div>
+          <button class="primary-btn full-width" type="submit">
+            Pay securely (demo)
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <script src="coffee-shop.js"></script>
+  </body>
+</html>
+
+
